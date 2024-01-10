@@ -104,3 +104,9 @@ button:disabled, button[disabled] {
 .textContainer:hover p{
     font-style: italic;
 }
+
+.progress{
+	color: #aaaaaa;
+	font-size: 14px;
+	margin: -20px;
+}
