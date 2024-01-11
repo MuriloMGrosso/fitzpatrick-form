@@ -14,6 +14,8 @@ function next(currentId, nextId)
     
     currentElement.setAttribute("hidden", "hidden");
     nextElement.removeAttribute("hidden");
+
+    backToTop();
 }
 
 function selectContainer(id, containerClass, buttonId)
@@ -120,4 +122,9 @@ function calculateSkinType() {
 			document.getElementById("skinTypeText").innerText = "UM ERRO OCORREU"; 
 			document.getElementById("skinTypeRecommendations").innerText = "Tente recarregar a página.";
 	}
+}
+
+function backToTop() {
+  	document.body.scrollTop = 0;
+  	document.documentElement.scrollTop = 0;
 }
