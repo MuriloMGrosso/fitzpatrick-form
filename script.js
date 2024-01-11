@@ -127,4 +127,5 @@ function calculateSkinType() {
 function backToTop() {
   	document.body.scrollTop = 0;
   	document.documentElement.scrollTop = 0;
+  	document.scrollingElement.scrollTop = 0;
 }
