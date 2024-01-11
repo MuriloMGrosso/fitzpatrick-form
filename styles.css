@@ -73,8 +73,8 @@ button:disabled, button[disabled] {
 .imageContainer img{
 	transition-duration: 0.2s;
 
-  	width: 80px;
-  	height: 80px;
+  	max-width: 80px;
+  	max-height: 80px;
 }
 
 .imageContainer:hover img{
@@ -92,18 +92,24 @@ button:disabled, button[disabled] {
 	margin: 10px;
 	margin-right: auto; 
 	margin-left: auto;
-	width: 50%;
+	width: 80%;
 	height: 50px;
 
 	border-style: solid;
   	border-color: #ddddcc;
 
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	text-align: center;
+
+  	padding-right: 10px;
+  	padding-left: 10px;
+
   	transition-duration: 0.1s;
 }
 
 .textContainer p{
-    text-align: center;
-
     transition-duration: 0.1s;
 }
 
@@ -115,4 +121,5 @@ button:disabled, button[disabled] {
 	color: #aaaaaa;
 	font-size: 14px;
 	margin: -20px;
+	margin-bottom: 50px;
 }
