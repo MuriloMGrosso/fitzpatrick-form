@@ -96,31 +96,44 @@ function calculateSkinType() {
 	{
 		case 1:
 			document.getElementById("skinTypeText").innerText = "SUA PELE É DO TIPO I";
-			document.getElementById("skinTypeRecommendations").innerText = "Sua pele é extremamente sensível ao sol, sempre queima, mas nunca fica bronzeada.\n\nA proteção de sua pele dura menos de 10 minutos. Por este motivo, possui alto risco de queimadura solar e de câncer de pele."; 
+			document.getElementById("skinTypeSun").innerText = "Sua pele é extremamente sensível ao sol, sempre queima, mas nunca fica bronzeada."; 
+			document.getElementById("skinTypeTime").innerText = "A proteção de sua pele dura menos de 10 minutos. Por este motivo, possui alto risco de queimadura solar e de câncer de pele.";
+			document.getElementById("sunScale").src = "Extras/sun_type_1.png";
 			break;
 		case 2:
 			document.getElementById("skinTypeText").innerText = "SUA PELE É DO TIPO II";
-			document.getElementById("skinTypeRecommendations").innerText = "Sua pele é muito sensível ao sol, queima facilmente e fica levemente bronzeada.\n\nA proteção de sua pele dura de 10 a 20 minutos. Por este motivo, possui alto risco de queimadura solar e de câncer de pele."; 
+			document.getElementById("skinTypeSun").innerText = "Sua pele é muito sensível ao sol, queima facilmente e fica levemente bronzeada."; 
+			document.getElementById("skinTypeTime").innerText = "A proteção de sua pele dura de 10 a 20 minutos. Por este motivo, possui alto risco de queimadura solar e de câncer de pele.";
+			document.getElementById("sunScale").src = "Extras/sun_type_2.png";
 			break;
 		case 3:
 			document.getElementById("skinTypeText").innerText = "SUA PELE É DO TIPO III"; 
-			document.getElementById("skinTypeRecommendations").innerText = "Sua pele é sensível ao sol, queima algumas vezes e bronzea-se uniformemente.\n\nA proteção de sua pele dura entre 20 e 30 minutos. Possui risco mediano de queimadura solar, mas alto risco de câncer de pele."; 
+			document.getElementById("skinTypeSun").innerText = "Sua pele é sensível ao sol, queima algumas vezes e bronzea-se uniformemente."; 
+			document.getElementById("skinTypeTime").innerText = "A proteção de sua pele dura entre 20 e 30 minutos. Possui risco mediano de queimadura solar, mas alto risco de câncer de pele.";
+			document.getElementById("sunScale").src = "Extras/sun_type_3.png";
 			break;
 		case 4:
 			document.getElementById("skinTypeText").innerText = "SUA PELE É DO TIPO IV";
-			document.getElementById("skinTypeRecommendations").innerText = "Sua pele é suavente sensível ao sol, queima levemente, mas sempre fica altamente bronzeada.\n\nA proteção de sua pele dura cerca 40 minutos. Possui baixo risco de queimadura solar e de câncer de pele."; 
+			document.getElementById("skinTypeSun").innerText = "Sua pele é suavente sensível ao sol, queima levemente, mas sempre fica altamente bronzeada."; 
+			document.getElementById("skinTypeTime").innerText = "A proteção de sua pele dura cerca 40 minutos. Possui baixo risco de queimadura solar e de câncer de pele.";
+			document.getElementById("sunScale").src = "Extras/sun_type_4.png";
 			break;
 		case 5:
 			document.getElementById("skinTypeText").innerText = "SUA PELE É DO TIPO V";
-			document.getElementById("skinTypeRecommendations").innerText = "Sua pele é resistente ao sol, raramente queima, mas fica muito bronzeada.\n\nA proteção de sua pele pode durar mais de 90 minutos. Possui risco quase nulo de queimadura solar e de câncer de pele."; 
+			document.getElementById("skinTypeSun").innerText = "Sua pele é resistente ao sol, raramente queima, mas fica muito bronzeada."; 
+			document.getElementById("skinTypeTime").innerText = "A proteção de sua pele pode durar mais de 90 minutos. Possui risco quase nulo de queimadura solar e de câncer de pele.";
+			document.getElementById("sunScale").src = "Extras/sun_type_5.png";
 			break;
 		case 6:
 			document.getElementById("skinTypeText").innerText = "SUA PELE É DO TIPO VI";
-			document.getElementById("skinTypeRecommendations").innerText = "Sua pele é muito resistente ao sol, nunca queima e é profundamente pigmentada.\n\nA proteção de sua pele pode durar mais de 90 minutos. Possui risco quase nulo de queimadura solar e de câncer de pele."; 
+			document.getElementById("skinTypeSun").innerText = "Sua pele é muito resistente ao sol, nunca queima e é profundamente pigmentada."; 
+			document.getElementById("skinTypeTime").innerText = "A proteção de sua pele pode durar mais de 90 minutos. Possui risco quase nulo de queimadura solar e de câncer de pele.";
+			document.getElementById("sunScale").src = "Extras/sun_type_6.png";
 			break;
 		default:
 			document.getElementById("skinTypeText").innerText = "UM ERRO OCORREU"; 
-			document.getElementById("skinTypeRecommendations").innerText = "Tente recarregar a página.";
+			document.getElementById("skinTypeSun").innerText = "Tente recarregar a página.";
+			document.getElementById("skinTypeTime").innerText = "";
 	}
 }
 
