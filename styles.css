@@ -186,11 +186,6 @@ input[type="checkbox"]{
 /*Suporte para outras resoluções*/
 
 @media only screen and (max-width: 768px){
-
-	body {
-		height: 80vh;
-	}
-
 	.center {
 	  	width: 80%;
 	}
