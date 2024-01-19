@@ -1,11 +1,14 @@
-let eyeColor = 0
-let hairColor = 0
-let skinColor = 0
-let frecklesQuantity = 0
-let skinSunReaction = 0
-let skinTanned = 0
-let skinTannedIntensity = 0
-let skinSensitivity = 0
+let eyeColor = 0;
+let hairColor = 0;
+let skinColor = 0;
+let frecklesQuantity = 0;
+let skinSunReaction = 0;
+let skinTanned = 0;
+let skinTannedIntensity = 0;
+let skinSensitivity = 0;
+let isBrazilian = '';
+let uf = '';
+let city = '';
 
 function next(currentId, nextId)
 {
@@ -34,58 +37,138 @@ function selectContainer(id, containerClass, buttonId)
 function setEyeColor(value, id)
 {
 	eyeColor = value;
-	selectContainer(id,"imageContainer","eyeColorButton");
+	selectContainer(id,"eyeColorContainer","eyeColorButton");
 	//alert("Cor de olho selecionada: " + value);
 }
 
 function setHairColor(value, id)
 {
 	hairColor = value;
-	selectContainer(id,"imageContainer","hairColorButton");
+	selectContainer(id,"hairColorContainer","hairColorButton");
 	//alert("Cor de cabelo selecionada: " + value);
 }
 
 function setSkinColor(value, id)
 {
 	skinColor = value;
-	selectContainer(id,"imageContainer","skinColorButton");
+	selectContainer(id,"skinColorContainer","skinColorButton");
 	//alert("Cor de pele selecionada: " + value);
 }
 
 function setFrecklesQuantity(value, id)
 {
 	frecklesQuantity = value;
-	selectContainer(id,"textContainer","frecklesButton");
+	selectContainer(id,"frecklesContainer","frecklesButton");
 	//alert("Quantidade de sardas selecionada: " + value);
 }
 
 function setSkinSunReaction(value, id)
 {
 	skinSunReaction = value;
-	selectContainer(id,"textContainer","skinSunReactionButton");
+	selectContainer(id,"skinSunReactionContainer","skinSunReactionButton");
 	//alert("Reação da pele ao sol selecionada: " + value);
 }
 
 function setSkinTanned(value, id)
 {
 	skinTanned = value;
-	selectContainer(id,"textContainer","skinTannedButton");
+	selectContainer(id,"skinTannedContainer","skinTannedButton");
 	//alert("Bronzeamento de pele selecionado: " + value);
 }
 
 function setSkinTannedIntensity(value, id)
 {
 	skinTannedIntensity = value;
-	selectContainer(id,"textContainer","skinTannedIntensityButton");
+	selectContainer(id,"skinTannedIntensityContainer","skinTannedIntensityButton");
 	//alert("Intensidade de bronzeamento selecionada: " + value);
 }
 
 function setSkinSensitivity(value, id)
 {
 	skinSensitivity = value;
-	selectContainer(id,"textContainer","skinSensitivityButton");
+	selectContainer(id,"skinSensitivityContainer","skinSensitivityButton");
 	//alert("Sensibilidade selecionada: " + value);
 }
+
+function setBrazil(value)
+{
+	isBrazilian = value;
+	if(value == 'N')
+	{
+		document.getElementById("ufSelectDiv").classList.add("disabled");
+		document.getElementById("ufSelect").disabled = true;
+		document.getElementById("ufSelectForm").reset();
+		uf = '';
+
+		document.getElementById("cityInputDiv").classList.add("disabled");
+		document.getElementById("cityInput").disabled = true;
+		document.getElementById("cityInputForm").reset();
+		city = '';
+
+		document.getElementById("locationButton").disabled = false;
+	}
+	else
+	{
+		document.getElementById("ufSelectDiv").classList.remove("disabled");
+		document.getElementById("ufSelect").disabled = false;
+
+		document.getElementById("locationButton").disabled = true;
+	}
+
+	//alert("É brasileiro?: " + value);
+}
+
+$(document).ready(function() {
+	$("input:checkbox").on('click', function() {
+	  	var $box = $(this);
+	  	if ($box.is(":checked")) {
+	    	var group = "input:checkbox[name='" + $box.attr("name") + "']";
+	    	$(group).prop("checked", false);
+	    	$box.prop("checked", true);
+	  	} 
+	  	else
+	    	$box.prop("checked", false);
+	});
+
+	$("#ufSelect").change(function() {
+		let value = $(this).val();
+		uf = value;
+
+		if(value == 'DF')
+		{
+			document.getElementById("cityInputDiv").classList.add("disabled");
+			document.getElementById("cityInput").disabled = true;
+			document.getElementById("cityInputForm").reset();
+			city = '';
+
+			document.getElementById("locationButton").disabled = false;
+		}
+		else
+		{
+			document.getElementById("cityInputDiv").classList.remove("disabled");
+			document.getElementById("cityInput").disabled = false;
+
+			document.getElementById("locationButton").disabled = true;
+		}
+
+		//alert("UF selecionada: " + value);
+	});
+
+	$('#cityInput').keyup(function() {
+		let value = $(this).val();
+
+		if (value.length > 2)
+		{
+			city = value;
+			document.getElementById("locationButton").disabled = false;
+		}
+		else
+		{
+			city = '';
+			document.getElementById("locationButton").disabled = true;
+		}
+	});
+});
 
 function calculateSkinType() {
 	let score = eyeColor + hairColor + skinColor + frecklesQuantity + 

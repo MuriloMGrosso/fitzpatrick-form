@@ -1,7 +1,12 @@
+[hidden] {display: none !important;}
+
 /*--------------------------------------------*/
-body{
+
+body {
 	display: flex;
 	height: 100vh;
+
+	accent-color: #008CBA;
 }
 
 h1, h2 {
@@ -14,6 +19,11 @@ p {
 	color: #888888;
 }
 
+label{
+	font-family: Arial, Helvetica, Sans-serif;
+	color: #888888;
+}
+
 /*--------------------------------------------*/
 
 .center {
@@ -22,13 +32,6 @@ p {
   	width: 60%;
 
   	text-align: center;
-
-    /*
-    position: absolute;
-  	top: 50%;
-    -ms-transform: translate(30%,-50%);
-    transform: translate(30%,-50%);
-    */
 }
 
 /*--------------------------------------------*/
@@ -55,6 +58,42 @@ button:disabled, button[disabled] {
   	background-color: #ffeaab;
   	color: white;
   	border-color: #ffeaab;
+}
+
+/*--------------------------------------------*/
+
+select {
+	font-family: Arial, Helvetica, Sans-serif;
+	color: #888888;
+
+	border-radius: 100px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #888888;
+	width: 100px;
+	height: 32px;
+
+	text-align: center;
+}
+
+input[type="text"]{
+	font-family: Arial, Helvetica, Sans-serif;
+	color: #888888;
+
+	border-radius: 10px;
+	border-style: solid;
+	border-color: #888888;
+	width: 200px;
+	height: 32px;
+
+	text-align: center;
+}
+
+input[type="checkbox"]{
+	color: #888888;
+
+	width: 16px;
+	height: 16px;
 }
 
 /*--------------------------------------------*/
@@ -88,7 +127,6 @@ button:disabled, button[disabled] {
 /*--------------------------------------------*/
 
 .textContainer {
-    border-radius: 10px;
 	margin: 10px;
 	margin-right: auto; 
 	margin-left: auto;
@@ -97,6 +135,7 @@ button:disabled, button[disabled] {
 
 	border-style: solid;
   	border-color: #ddddcc;
+    border-radius: 100px;
 
   	display: flex;
   	justify-content: center;
@@ -122,4 +161,8 @@ button:disabled, button[disabled] {
 	font-size: 14px;
 	margin: -20px;
 	margin-bottom: 50px;
+}
+
+.disabled{
+	opacity: 0.3;
 }
