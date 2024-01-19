@@ -27,10 +27,12 @@ label{
 /*--------------------------------------------*/
 
 .center {
-  	padding: 0px;
+	padding: 0px;
   	margin: auto;
   	width: 60%;
 
+  	justify-content: center;
+  	align-items: center;
   	text-align: center;
 }
 
@@ -44,7 +46,8 @@ button {
   	color: white;
   	padding: 15px 32px;
 	border-radius: 100px;
-	margin: 40px;
+	margin: 20px;
+	margin-bottom: 40px;
 
 	transition-duration: 0.2s;
 }
@@ -110,14 +113,26 @@ input[type="checkbox"]{
 }
 
 .imageContainer img{
-	transition-duration: 0.2s;
-
   	width: 80px;
   	height: 80px;
+
+	transition-duration: 0.2s;
 }
 
 .imageContainer:hover img{
    	transform:scale(1.2);
+}
+
+.imageContainerEyeColor{
+	margin-right:auto; 
+	margin-left:auto; 
+	width:80%;
+}
+
+.imageContainerHairColor, .imageContainerSkinColor{
+	margin-right:auto; 
+	margin-left:auto; 
+	width:60%;
 }
 
 .caption {
@@ -165,4 +180,48 @@ input[type="checkbox"]{
 
 .disabled{
 	opacity: 0.3;
+}
+
+/*--------------------------------------------*/
+/*Suporte para outras resoluções*/
+
+@media only screen and (max-width: 768px){
+	body {
+	  	font-size: 12px;
+	}
+
+	button {
+		font-size: 12px;
+	  	padding: 8px 16px;
+	}
+
+	.center {
+	  	width: 80%;
+	}
+
+	.imageContainerEyeColor{
+		width:100%;
+	}
+
+	.imageContainerHairColor, .imageContainerSkinColor{
+		width:80%;
+	}
+
+	.imageContainer {
+	    width: 50px;
+	    height: 60px;
+	}
+
+	.imageContainer img{
+	  	width: 40px;
+	  	height: 40px;
+	}
+
+	.caption {
+		font-size: 9px;
+	}
+
+	.progress{
+		font-size: 12px;
+	}
 }
