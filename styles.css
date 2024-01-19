@@ -4,7 +4,7 @@
 
 body {
 	display: flex;
-	height: 100vh;
+	height: 97vh;
 
 	accent-color: #008CBA;
 }
@@ -145,7 +145,7 @@ input[type="checkbox"]{
 	margin: 10px;
 	margin-right: auto; 
 	margin-left: auto;
-	width: 80%;
+	width: 50%;
 	height: 50px;
 
 	border-style: solid;
@@ -186,13 +186,9 @@ input[type="checkbox"]{
 /*Suporte para outras resoluções*/
 
 @media only screen and (max-width: 768px){
-	body {
-	  	font-size: 12px;
-	}
 
-	button {
-		font-size: 12px;
-	  	padding: 8px 16px;
+	body {
+		height: 50vh;
 	}
 
 	.center {
@@ -208,20 +204,12 @@ input[type="checkbox"]{
 	}
 
 	.imageContainer {
-	    width: 50px;
-	    height: 60px;
+	    width: 80px;
+	    height: 70px;
 	}
 
 	.imageContainer img{
-	  	width: 40px;
-	  	height: 40px;
-	}
-
-	.caption {
-		font-size: 9px;
-	}
-
-	.progress{
-		font-size: 12px;
+	  	width: 70px;
+	  	height: 70px;
 	}
 }
