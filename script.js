@@ -195,28 +195,28 @@ function calculateSkinType() {
 			document.getElementById("skinTypeText").innerText = "SUA PELE É DO TIPO III"; 
 			document.getElementById("skinTypeSun").innerText = "Sua pele é sensível ao sol, queima algumas vezes e bronzeia-se uniformemente."; 
 			document.getElementById("skinTypeTime").innerText = "A proteção de sua pele dura entre 20 e 30 minutos. Possui risco mediano de queimadura solar, mas alto risco de câncer de pele.";
-			document.getElementById("skinTypeRecommendations").innerText = "Recomenda-se usar protetor solar com FPS superior a 15. Além disso, evite tomar sol entre as 10 e as 16 horas.";
+			document.getElementById("skinTypeRecommendations").innerText = "Recomenda-se usar protetor solar com FPS superior a 15. Além disso, evite tomar sol entre às 10 e às 16 horas.";
 			document.getElementById("sunScale").src = "Extras/sun_type_3.png";
 			break;
 		case 4:
 			document.getElementById("skinTypeText").innerText = "SUA PELE É DO TIPO IV";
 			document.getElementById("skinTypeSun").innerText = "Sua pele é suavemente sensível ao sol, queima levemente, mas sempre fica altamente bronzeada."; 
 			document.getElementById("skinTypeTime").innerText = "A proteção de sua pele dura cerca 40 minutos. Possui baixo risco de queimadura solar e de câncer de pele.";
-			document.getElementById("skinTypeRecommendations").innerText = "Recomenda-se usar protetor solar com FPS superior a 15. Além disso, evite tomar sol entre as 10 e as 16 horas.";
+			document.getElementById("skinTypeRecommendations").innerText = "Recomenda-se usar protetor solar com FPS superior a 15. Além disso, evite tomar sol entre às 10 e às 16 horas.";
 			document.getElementById("sunScale").src = "Extras/sun_type_4.png";
 			break;
 		case 5:
 			document.getElementById("skinTypeText").innerText = "SUA PELE É DO TIPO V";
 			document.getElementById("skinTypeSun").innerText = "Sua pele é resistente ao sol, raramente queima, mas fica muito bronzeada."; 
 			document.getElementById("skinTypeTime").innerText = "A proteção de sua pele pode durar mais de 90 minutos. Possui risco quase nulo de queimadura solar e de câncer de pele.";
-			document.getElementById("skinTypeRecommendations").innerText = "Recomenda-se usar protetor solar com FPS superior a 15. Além disso, evite tomar sol entre as 10 e as 16 horas.";
+			document.getElementById("skinTypeRecommendations").innerText = "Recomenda-se usar protetor solar com FPS superior a 15. Além disso, evite tomar sol entre às 10 e às 16 horas.";
 			document.getElementById("sunScale").src = "Extras/sun_type_5.png";
 			break;
 		case 6:
 			document.getElementById("skinTypeText").innerText = "SUA PELE É DO TIPO VI";
 			document.getElementById("skinTypeSun").innerText = "Sua pele é muito resistente ao sol, nunca queima e é profundamente pigmentada."; 
 			document.getElementById("skinTypeTime").innerText = "A proteção de sua pele pode durar mais de 90 minutos. Possui risco quase nulo de queimadura solar e de câncer de pele.";
-			document.getElementById("skinTypeRecommendations").innerText = "Recomenda-se usar protetor solar com FPS superior a 15. Além disso, evite tomar sol entre as 10 e as 16 horas.";
+			document.getElementById("skinTypeRecommendations").innerText = "Recomenda-se usar protetor solar com FPS superior a 15. Além disso, evite tomar sol entre às 10 e às 16 horas.";
 			document.getElementById("sunScale").src = "Extras/sun_type_6.png";
 			break;
 		default:

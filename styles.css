@@ -204,7 +204,15 @@ input[type="checkbox"]{
 	}
 
 	.imageContainer img{
-	  	width: 70px;
-	  	height: 70px;
+	  	width: 65px;
+	  	height: 65px;
+	}
+
+	.caption {
+	    font-size: 14px;
+	}
+
+	button {
+	  	padding: 10px 20px;
 	}
 }
