@@ -1,24 +1,57 @@
-let eyeColor = 0;
-let hairColor = 0;
-let skinColor = 0;
-let frecklesQuantity = 0;
-let skinSunReaction = 0;
-let skinTanned = 0;
-let skinTannedIntensity = 0;
-let skinSensitivity = 0;
+let attributes = {
+	eyeColor: 0,
+	hairColor: 0,
+	skinColor: 0,
+	freckles: 0,
+	skinSunReaction: 0,
+	skinTanned: 0,
+	skinTannedIntensity: 0,
+	skinSensitivity: 0,
+};
+
 let isBrazilian = '';
 let uf = '';
 let city = '';
 
-function next(currentId, nextId)
-{
-	let currentElement = document.getElementById(currentId);
-	let nextElement = document.getElementById(nextId);
-    
-    currentElement.setAttribute("hidden", "hidden");
-    nextElement.removeAttribute("hidden");
+let questions = ['intro','eyeColor','hairColor','skinColor','freckles','skinSunReaction','skinTanned',
+			 'skinTannedIntensity','skinSensitivity','location','agreement','result'];
+let currentQuestionIndex = 0;
 
+function nextQuestion()
+{
+	let currentQuestion = document.getElementById(questions[currentQuestionIndex]);
+	let nextQuestion = document.getElementById(questions[currentQuestionIndex + 1]);
+    currentQuestionIndex++;
+	changeQuestion(currentQuestion, nextQuestion);
+}
+
+function prevQuestion()
+{
+	let currentQuestion = document.getElementById(questions[currentQuestionIndex]);
+	let prevQuestion = document.getElementById(questions[currentQuestionIndex - 1]);
+    currentQuestionIndex--;
+	changeQuestion(currentQuestion, prevQuestion);
+}
+
+function changeQuestion(oldQuestion, newQuestion)
+{
+    oldQuestion.setAttribute("hidden", "hidden");
+    newQuestion.removeAttribute("hidden");
     backToTop();
+}
+
+function backToTop() {
+  	document.body.scrollTop = 0;
+  	document.documentElement.scrollTop = 0;
+  	document.scrollingElement.scrollTop = 0;
+}
+
+function setAttributeValue(value, containerId)
+{
+	let attribute = questions[currentQuestionIndex];
+	attributes[attribute] = value;
+	selectContainer(containerId, `${attribute}Container`, `${attribute}Button`);
+	//alert(`${attribute} selecionado: ${value}`);
 }
 
 function selectContainer(id, containerClass, buttonId)
@@ -32,62 +65,6 @@ function selectContainer(id, containerClass, buttonId)
 	document.getElementById(id).style.fontWeight = "bold";
 
 	document.getElementById(buttonId).disabled = false;
-}
-
-function setEyeColor(value, id)
-{
-	eyeColor = value;
-	selectContainer(id,"eyeColorContainer","eyeColorButton");
-	//alert("Cor de olho selecionada: " + value);
-}
-
-function setHairColor(value, id)
-{
-	hairColor = value;
-	selectContainer(id,"hairColorContainer","hairColorButton");
-	//alert("Cor de cabelo selecionada: " + value);
-}
-
-function setSkinColor(value, id)
-{
-	skinColor = value;
-	selectContainer(id,"skinColorContainer","skinColorButton");
-	//alert("Cor de pele selecionada: " + value);
-}
-
-function setFrecklesQuantity(value, id)
-{
-	frecklesQuantity = value;
-	selectContainer(id,"frecklesContainer","frecklesButton");
-	//alert("Quantidade de sardas selecionada: " + value);
-}
-
-function setSkinSunReaction(value, id)
-{
-	skinSunReaction = value;
-	selectContainer(id,"skinSunReactionContainer","skinSunReactionButton");
-	//alert("Reação da pele ao sol selecionada: " + value);
-}
-
-function setSkinTanned(value, id)
-{
-	skinTanned = value;
-	selectContainer(id,"skinTannedContainer","skinTannedButton");
-	//alert("Bronzeamento de pele selecionado: " + value);
-}
-
-function setSkinTannedIntensity(value, id)
-{
-	skinTannedIntensity = value;
-	selectContainer(id,"skinTannedIntensityContainer","skinTannedIntensityButton");
-	//alert("Intensidade de bronzeamento selecionada: " + value);
-}
-
-function setSkinSensitivity(value, id)
-{
-	skinSensitivity = value;
-	selectContainer(id,"skinSensitivityContainer","skinSensitivityButton");
-	//alert("Sensibilidade selecionada: " + value);
 }
 
 function setBrazil(value)
@@ -119,6 +96,25 @@ function setBrazil(value)
 }
 
 $(document).ready(function() {
+	let nextButtons = document.getElementsByClassName('nextButton');
+    for (var i = 0; i < nextButtons.length; i++)
+        nextButtons[i].addEventListener('click', function(){ nextQuestion(); });
+
+    let prevButtons = document.getElementsByClassName('prevButton');
+    for (var i = 0; i < prevButtons.length; i++)
+        prevButtons[i].addEventListener('click', function(){ prevQuestion(); });
+
+    let containers = document.querySelectorAll('.imageContainer,.textContainer');
+    for (var i = 0; i < containers.length; i++)
+    {
+    	let container = containers[i];
+        container.addEventListener('click', function(){ setAttributeValue(parseInt(container.getAttribute('value')), container.id); });
+    }
+
+    let agreementButton = document.getElementById('agreementButton');
+    agreementButton.addEventListener('click', function(){ calculateSkinType(); });
+
+    /*Input do tipo checkbox exclusivo (permite apenas uma escolha)*/
 	$("input:checkbox").on('click', function() {
 	  	var $box = $(this);
 	  	if ($box.is(":checked")) {
@@ -171,8 +167,9 @@ $(document).ready(function() {
 });
 
 function calculateSkinType() {
-	let score = eyeColor + hairColor + skinColor + frecklesQuantity + 
-				skinSunReaction + skinTanned + skinTannedIntensity + skinSensitivity;
+	let score = 0;
+	for(let attribute in attributes)
+		score += attributes[attribute];
 	let skinType = score == 0? 1 : Math.ceil(score/6);
 
 	switch(skinType)
@@ -225,10 +222,4 @@ function calculateSkinType() {
 			document.getElementById("skinTypeTime").innerText = "";
 			document.getElementById("skinTypeRecommendations").innerText = "";
 	}
-}
-
-function backToTop() {
-  	document.body.scrollTop = 0;
-  	document.documentElement.scrollTop = 0;
-  	document.scrollingElement.scrollTop = 0;
 }

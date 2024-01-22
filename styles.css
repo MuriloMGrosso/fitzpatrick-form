@@ -3,6 +3,8 @@
 /*--------------------------------------------*/
 
 body {
+	font-family: Arial, Helvetica, Sans-serif;
+	color: #888888;
 	display: flex;
 	height: 97vh;
 
@@ -10,18 +12,7 @@ body {
 }
 
 h1, h2 {
-	font-family: Arial, Helvetica, Sans-serif;
 	color: #008CBA;
-}
-
-p {
-	font-family: Arial, Helvetica, Sans-serif;
-	color: #888888;
-}
-
-label{
-	font-family: Arial, Helvetica, Sans-serif;
-	color: #888888;
 }
 
 /*--------------------------------------------*/
@@ -39,8 +30,6 @@ label{
 /*--------------------------------------------*/
 
 button {
-	font-family: Arial, Helvetica, Sans-serif;
-
   	background-color: #ffbf00;
   	border-color: #ffbf00;
   	color: white;
@@ -170,6 +159,8 @@ input[type="checkbox"]{
 .textContainer:hover p{
     font-style: italic;
 }
+
+/*--------------------------------------------*/
 
 .progress{
 	color: #aaaaaa;
