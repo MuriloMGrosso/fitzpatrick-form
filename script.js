@@ -1,12 +1,12 @@
 let attributes = {
-	eyeColor: 0,
-	hairColor: 0,
-	skinColor: 0,
-	freckles: 0,
-	skinSunReaction: 0,
-	skinTanned: 0,
-	skinTannedIntensity: 0,
-	skinSensitivity: 0,
+	eyeColor: -1,
+	hairColor: -1,
+	skinColor: -1,
+	freckles: -1,
+	skinSunReaction: -1,
+	skinTanned: -1,
+	skinTannedIntensity: -1,
+	skinSensitivity: -1,
 };
 
 let isBrazilian = '';
