@@ -126,8 +126,8 @@ $(document).ready(function() {
 	    	$box.prop("checked", false);
 	});
 
-	$("#ufSelect").change(function() {
-		let value = $(this).val();
+	document.getElementById('ufSelect').addEventListener('change', function() {
+		let value = this.value;
 		uf = value;
 
 		if(value == 'DF')
@@ -150,12 +150,12 @@ $(document).ready(function() {
 		//alert("UF selecionada: " + value);
 	});
 
-	$('#cityInput').keyup(function() {
-		let value = $(this).val();
+	document.getElementById('cityInput').addEventListener('input', function(){
+    	this.value = this.value.replace(/[^a-zA-Zá-úâ-ûãõä-üçÇ' -]/g, '');
 
-		if (value.length > 2)
+		if (this.value.length > 2)
 		{
-			city = value;
+			city = this.value;
 			document.getElementById("locationButton").disabled = false;
 		}
 		else
