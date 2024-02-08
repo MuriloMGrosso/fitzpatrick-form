@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<head>
+    <title>Descubra seu FPS</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra o FPS natural da sua pele com este formulário desenvolvido por alunos e pesquisadores da USP.">
+
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="icon" href="img/extras/sun.ico" type="image/x-icon">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="module" src="src/script.js"></script>
+    <script type="module" src="src/index.js"></script>
+</head>
+<body>
+    <div class="center">
+        <div id="intro">
+            <h1>DESCUBRA O FPS NATURAL DA SUA PELE!</h1>
+
+            <p>O <b>Fator de Proteção Solar</b> indica o tempo em que você pode permanecer ao sol sem deixar a pele vermelha.<br>
+            Responda a estas perguntas para descobrir qual é o seu!</p>
+
+            <button class="nextButton" type="button">Vamos lá</button>
+        </div>
+
+        <div id="eyeColor" hidden>
+            <h2>QUAL A COR DE SEUS OLHOS?</h2>
+
+            <p>Selecione a imagem mais próxima da cor de seus olhos</p>
+
+            <div class="imageContainerEyeColor">
+                <div class="imageContainer eyeColorContainer" id="eyeLightBlue" value=0>
+                    <img src="img/eyes/eye_light_blue.png" alt="Azul claro"> 
+                    <p class="caption">Azul<br>claro</p>
+                </div>
+
+                <div class="imageContainer eyeColorContainer" id="eyeBlue" value=1>
+                    <img src="img/eyes/eye_blue.png" alt="Azul"> 
+                    <p class="caption">Azul<br>&nbsp;</p>
+                </div>
+
+                <div class="imageContainer eyeColorContainer" id="eyeLightGray" value=0>
+                    <img src="img/eyes/eye_light_gray.png" alt="Cinza claro"> 
+                    <p class="caption">Cinza<br>claro</p>
+                </div>
+
+                <div class="imageContainer eyeColorContainer" id="eyeGray" value=1>
+                    <img src="img/eyes/eye_gray.png" alt="Cinza"> 
+                    <p class="caption">Cinza<br>&nbsp;</p>
+                </div>
+
+                <div class="imageContainer eyeColorContainer" id="eyeLightGreen" value=0>
+                    <img src="img/eyes/eye_light_green.png" alt="Verde claro"> 
+                    <p class="caption">Verde<br>claro</p>
+                </div>
+
+                <div class="imageContainer eyeColorContainer" id="eyeGreen" value=1>
+                    <img src="img/eyes/eye_green.png" alt="Verde"> 
+                    <p class="caption">Verde<br>&nbsp;</p>
+                </div>
+
+                <div class="imageContainer eyeColorContainer" id="eyeHazelnut" value=2>
+                    <img src="img/eyes/eye_hazelnut.png" alt="Avelã"> 
+                    <p class="caption">Avelã<br>&nbsp;</p>
+                </div>
+
+                <div class="imageContainer eyeColorContainer" id="eyeLightBrown" value=2>
+                    <img src="img/eyes/eye_light_brown.png" alt="Castanho claro"> 
+                    <p class="caption">Castanho claro</p>
+                </div>
+
+                <div class="imageContainer eyeColorContainer" id="eyeDarkBrown" value=3>
+                    <img src="img/eyes/eye_dark_brown.png" alt="Castanho escuro"> 
+                    <p class="caption">Castanho<br>escuro</p>
+                </div>
+
+                <div class="imageContainer eyeColorContainer" id="eyeBrownishBlack" value=4>
+                    <img src="img/eyes/eye_brownish_black.png" alt="Preto acastanhado"> 
+                    <p class="caption">Preto<br>acastanhado</p>
+                </div>
+            </div>
+
+            <button type="button" class="prevButton">Voltar</button>
+            <button id="eyeColorButton" class="nextButton" type="button" disabled>Próxima</button>
+
+            <p class="progress">Pergunta 1 de 9</p>
+        </div>
+
+        <div id="hairColor" hidden>
+            <h2>QUAL A COR DE SEU CABELO?</h2>
+
+            <p>Selecione a imagem mais próxima da cor <b>natural</b> de seu cabelo</p>
+
+            <div class="imageContainerHairColor">
+                <div class="imageContainer hairColorContainer" id="hairRed" value=0>
+                    <img src="img/hair/hair_red.png" alt="Vermelho"> 
+                    <p class="caption">Vermelho<br>&nbsp;</p>
+                </div>
+
+                <div class="imageContainer hairColorContainer" id="hairLightBlonde" value=1>
+                    <img src="img/hair/hair_light_blonde.png" alt="Loiro claro"> 
+                    <p class="caption">Loiro<br>claro</p>
+                </div>
+
+                <div class="imageContainer hairColorContainer" id="hairBlonde" value=1>
+                    <img src="img/hair/hair_blonde.png" alt="Loiro"> 
+                    <p class="caption">Loiro<br>&nbsp;</p>
+                </div>
+
+                <div class="imageContainer hairColorContainer" id="hairDarkBlonde" value=2>
+                    <img src="img/hair/hair_dark_blonde.png" alt="Loiro escuro"> 
+                    <p class="caption">Loiro<br>escuro</p>
+                </div>
+
+                <div class="imageContainer hairColorContainer" id="hairLightBrown" value=2>
+                    <img src="img/hair/hair_light_brown.png" alt="Castanho claro"> 
+                    <p class="caption">Castanho<br>claro</p>
+                </div>
+
+                <div class="imageContainer hairColorContainer" id="hairDarkBrown" value=3>
+                    <img src="img/hair/hair_dark_brown.png" alt="Castanho escuro"> 
+                    <p class="caption">Castanho<br>escuro</p>
+                </div>
+
+                <div class="imageContainer hairColorContainer" id="hairBlack" value=4>
+                    <img src="img/hair/hair_black.png" alt="Preto"> 
+                    <p class="caption">Preto<br>&nbsp;</p>
+                </div>
+            </div>
+
+            <button type="button" class="prevButton">Voltar</button>
+            <button id="hairColorButton" class="nextButton" type="button" disabled>Próxima</button>
+
+            <p class="progress">Pergunta 2 de 9</p>
+        </div>
+
+        <div id="skinColor" hidden>
+            <h2>QUAL A COR DE SUA PELE?</h2>
+
+            <p>Selecione a imagem mais próxima da cor <b>natural</b> de sua pele</p>
+
+            <div class="imageContainerSkinColor">
+                <div class="imageContainer skinColorContainer" id="skinWhite" value=0>
+                    <img src="img/hands/hand_white.png" alt="Branco marfim"> 
+                    <p class="caption">Branco<br>marfim</p>
+                </div>
+
+                <div class="imageContainer skinColorContainer" id="skinPale" value=1>
+                    <img src="img/hands/hand_pale.png" alt="Pele pálida"> 
+                    <p class="caption">Pele<br>pálida</p>
+                </div>
+
+                <div class="imageContainer skinColorContainer" id="skinLight" value=1>
+                    <img src="img/hands/hand_light.png" alt="Pele clara"> 
+                    <p class="caption">Pele<br>clara</p>
+                </div>
+
+                <div class="imageContainer skinColorContainer" id="skinGolden" value=2>
+                    <img src="img/hands/hand_golden.png" alt="Pele dourada"> 
+                    <p class="caption">Pele<br>dourada</p>
+                </div>
+
+                <div class="imageContainer skinColorContainer" id="skinLightBrown" value=3>
+                    <img src="img/hands/hand_light_brown.png" alt="Castanho claro"> 
+                    <p class="caption">Castanho<br>claro</p>
+                </div>
+
+                <div class="imageContainer skinColorContainer" id="skinDarkBrown" value=4>
+                    <img src="img/hands/hand_dark_brown.png" alt="Castanho escuro"> 
+                    <p class="caption">Castanho<br>escuro</p>
+                </div>
+
+                <div class="imageContainer skinColorContainer" id="skinBlack" value=4>
+                    <img src="img/hands/hand_black.png" alt="Preto"> 
+                    <p class="caption">Preto<br>&nbsp;</p>
+                </div>
+            </div>
+
+            <button type="button" class="prevButton">Voltar</button>
+            <button id="skinColorButton" class="nextButton" type="button" disabled>Próxima</button>
+
+            <p class="progress">Pergunta 3 de 9</p>
+        </div>
+
+        <div id="freckles" hidden>
+            <h2>QUANTAS SARDAS POSSUI NA PELE?</h2>
+
+            <p>Selecione a melhor opção</p>
+
+            <div>
+                <div class="textContainer frecklesContainer" id="frecklesMany" value=0>
+                    <p>Muitas</p>
+                </div>
+
+                <div class="textContainer frecklesContainer" id="frecklesSeveral" value=1>
+                    <p>Várias</p>
+                </div>
+
+                <div class="textContainer frecklesContainer" id="frecklesSome" value=2>
+                    <p>Algumas</p>
+                </div>
+
+                <div class="textContainer frecklesContainer" id="frecklesFew" value=3>
+                    <p>Poucas</p>
+                </div>
+
+                <div class="textContainer frecklesContainer" id="frecklesNone" value=4>
+                    <p>Nenhuma</p>
+                </div>
+            </div>
+
+            <button type="button" class="prevButton">Voltar</button>
+            <button id="frecklesButton" class="nextButton" type="button" disabled>Próxima</button>
+
+            <p class="progress">Pergunta 4 de 9</p>
+        </div>
+
+        <div id="skinSunReaction" hidden>
+            <h2>COMO SUA PELE REAGE AO SOL?</h2>
+
+            <p>Selecione a melhor opção</p>
+
+            <div>
+                <div class="textContainer skinSunReactionContainer" id="skinReactionSevereBurn" value=0>
+                    <p style="font-size: 90%;">Sempre queima, forma bolhas e descama</p>
+                </div>
+
+                <div class="textContainer skinSunReactionContainer" id="skinReactionModerateBurn" value=1>
+                    <p style="font-size: 90%;">Muitas vezes queima, forma bolhas e descama</p>
+                </div>
+
+                <div class="textContainer skinSunReactionContainer" id="skinReactionSometimesBurn" value=2>
+                    <p>Queima moderadamente</p>
+                </div>
+
+                <div class="textContainer skinSunReactionContainer" id="skinReactionRareBurn" value=3>
+                    <p>Queima raramente</p>
+                </div>
+
+                <div class="textContainer skinSunReactionContainer" id="skinReactionNoBurn" value=4>
+                    <p>Nunca queima</p>
+                </div>
+            </div>
+
+            <button type="button" class="prevButton">Voltar</button>
+            <button id="skinSunReactionButton" class="nextButton" type="button" disabled>Próxima</button>
+
+            <p class="progress">Pergunta 5 de 9</p>
+        </div>
+
+        <div id="skinTanned" hidden>
+            <h2>SUA PELE FICA BRONZEADA?</h2>
+
+            <p>Selecione a melhor opção</p>
+
+            <div>
+                <div class="textContainer skinTannedContainer" id="skinTannedNever" value=0>
+                    <p>Nunca</p>
+                </div>
+
+                <div class="textContainer skinTannedContainer" id="skinTannedRarely" value=1>
+                    <p>Raramente</p>
+                </div>
+
+                <div class="textContainer skinTannedContainer" id="skinTannedSometimes" value=2>
+                    <p>Às vezes</p>
+                </div>
+
+                <div class="textContainer skinTannedContainer" id="skinTannedOften" value=3>
+                    <p>Frequentemente</p>
+                </div>
+
+                <div class="textContainer skinTannedContainer" id="skinTannedAlways" value=4>
+                    <p>Sempre</p>
+                </div>
+            </div>
+
+            <button type="button" class="prevButton">Voltar</button>
+            <button id="skinTannedButton" class="nextButton" type="button" disabled>Próxima</button>
+
+            <p class="progress">Pergunta 6 de 9</p>
+        </div>
+
+        <div id="skinTannedIntensity" hidden>
+            <h2>COM QUE INTENSIDADE SUA PELE FICA BRONZEADA?</h2>
+
+            <p>Selecione a melhor opção</p>
+
+            <div>
+                <div class="textContainer skinTannedIntensityContainer" id="skinTannedIntensityHardly" value=0>
+                    <p>Pouco ou muito pouco</p>
+                </div>
+
+                <div class="textContainer skinTannedIntensityContainer" id="skinTannedIntensityLight" value=1>
+                    <p>Levemente</p>
+                </div>
+
+                <div class="textContainer skinTannedIntensityContainer" id="skinTannedIntensityMedium" value=2>
+                    <p>Moderadamente</p>
+                </div>
+
+                <div class="textContainer skinTannedIntensityContainer" id="skinTannedIntensityDark" value=3>
+                    <p>Profundamente</p>
+                </div>
+
+                <div class="textContainer skinTannedIntensityContainer" id="skinTannedIntensityVeryDark" value=4>
+                    <p>A minha pele é naturalmente escura</p>
+                </div>
+            </div>
+
+            <button type="button" class="prevButton">Voltar</button>
+            <button id="skinTannedIntensityButton" class="nextButton" type="button" disabled>Próxima</button>
+
+            <p class="progress">Pergunta 7 de 9</p>
+        </div>
+
+        <div id="skinSensitivity" hidden>
+            <h2>QUAL É O GRAU DE SENSIBILIDADE DO SEU ROSTO AO SOL?</h2>
+
+            <p>Selecione a melhor opção</p>
+
+            <div>
+                <div class="textContainer skinSensitivityContainer" id="skinVerySensitivity" value=0>
+                    <p>Muito sensível</p>
+                </div>
+
+                <div class="textContainer skinSensitivityContainer" id="skinNormalSensitivity" value=1>
+                    <p>Sensível</p>
+                </div>
+
+                <div class="textContainer skinSensitivityContainer" id="skinMidlySensitivity" value=2>
+                    <p>Normal</p>
+                </div>
+
+                <div class="textContainer skinSensitivityContainer" id="skinResistantSensitivity" value=3>
+                    <p>Resistente</p>
+                </div>
+
+                <div class="textContainer skinSensitivityContainer" id="skinVeryResistantSensitivity" value=4>
+                    <p style="font-size: 90%;">Muito resistente/nunca tive um problema</p>
+                </div>
+            </div>
+
+            <button type="button" class="prevButton">Voltar</button>
+            <button id="skinSensitivityButton" class="nextButton" type="button" disabled>Próxima</button>
+
+            <p class="progress">Pergunta 8 de 9</p>
+        </div>
+
+        <div id="location" hidden>
+            <h2>ONDE VOCÊ NASCEU?</h2>
+
+            <div>
+                <p>Você nasceu no Brasil?</p>
+
+                <label for='isBrazilian'>Sim</label>
+                <input type='checkbox' id='isBrazilian' name='nationalityButton' value='true'>
+
+                <label for='notBrazilian'>Não</label>
+                <input type='checkbox' id='notBrazilian' name='nationalityButton' value='false'>
+            </div>
+
+            <br>
+
+            <div id="fuSelectDiv" class="disabled">
+                <p>Selecione seu estado de <b>origem</b></p>
+                <form id="fuSelectForm">
+                    <select id='fuSelect' disabled>
+                        <option selected hidden value=''></option>
+                        <option value='AC'>AC</option>
+                        <option value='AL'>AL</option>
+                        <option value='AP'>AP</option>
+                        <option value='AM'>AM</option>
+                        <option value='BA'>BA</option>
+                        <option value='CE'>CE</option>
+                        <option value='DF'>DF</option>
+                        <option value='ES'>ES</option>
+                        <option value='GO'>GO</option>
+                        <option value='MA'>MA</option>
+                        <option value='MT'>MT</option>
+                        <option value='MS'>MS</option>
+                        <option value='MG'>MG</option>
+                        <option value='PA'>PA</option>
+                        <option value='PB'>PB</option>
+                        <option value='PR'>PR</option>
+                        <option value='PE'>PE</option>
+                        <option value='PI'>PI</option>
+                        <option value='RJ'>RJ</option>
+                        <option value='RN'>RN</option>
+                        <option value='RS'>RS</option>
+                        <option value='RO'>RO</option>
+                        <option value='RR'>RR</option>
+                        <option value='SC'>SC</option>
+                        <option value='SP'>SP</option>
+                        <option value='SE'>SE</option>
+                        <option value='TO'>TO</option>
+                    </select>
+                </form>
+            </div>
+
+            <br>
+
+            <div id="countyInputDiv" class="disabled">
+                <p>Informe seu município de <b>origem</b></p>
+                <form id="countyInputForm">
+                    <input type="text" id="countyInput" maxlength="32" disabled></input>
+                </form>
+            </div>
+
+            <br>
+
+            <button type="button" class="prevButton">Voltar</button>
+            <button id="locationButton" class="nextButton" type="button" disabled>Próxima</button>
+
+            <p class="progress">Pergunta 9 de 9</p>
+        </div>
+
+        <div id="agreement" hidden>
+            <h2>ÓTIMO! AGORA, ANTES DE VER SEU RESULTADO...</h2>
+
+            <p> 	Este formulário foi feito por alunos e pesquisadores da <b>USP</b> com o intúito de 
+                coletar dados referentes aos diferentes tons de pele no Brasil.<br><br>
+                    Os dados serão armazenados de forma <b>anônima</b> e poderão contribuir para a pesquisa
+                científica do país.<br><br>
+                    Ao continuar, você concorda em compartilhar as respostas deste formulário. </p>
+
+            <button type="button" class="prevButton">Voltar</button>
+            <button id="agreementButton" class="nextButton" type="button">Continuar</button>
+        </div>
+
+        <div id="result" hidden>
+            <h2 id="skinTypeText">SUA PELE É DO TIPO</h2>
+            <img id="sunScale" src="img/extras/sun_type_1.png" alt="Sol" style="width:290px; height:40px;">
+            <p id="skinTypeSun"></p>
+            <img src="img/extras/chronometer.png" alt="Cronômetro" style="width:40px; height:40px;">
+            <p id="skinTypeTime"></p>
+            <img src="img/extras/sunscreen.png" alt="Protetor solar" style="width:25px; height:40px;">
+            <p id="skinTypeRecommendations"></p>
+            <br>
+            <p>Os cálculos para encontrar seu tipo de pele foram baseados na escala de Fitzpatrick. <a href="https://pt.wikipedia.org/wiki/Escala_de_Fitzpatrick">Saiba mais<a>.</p>
+            <p>Agradecemos pelo seu tempo e paciência!</p>
+        </div>
+    </div>
+</body>
+</html>
