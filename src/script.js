@@ -13,6 +13,7 @@ let userInformation = {
 	county: null,
 	skinType: -1,
 };
+let isBrazilian = null;
 
 let questions = [
 	'intro',
@@ -53,7 +54,10 @@ $(document).ready(function()
 	for (var i = 0; i < isBrazilianButtons.length; i++)
 	{
 		isBrazilianButtons[i].addEventListener('click', function(){ 
-			setNationality(this.value === "true");
+			isBrazilian = isBrazilian == this.value
+				? null
+				: this.value;
+			setNationality();
 			exclusiveCheckbox($(this));
 		});
 	}
@@ -131,14 +135,28 @@ function exclusiveCheckbox($box)
 	  $box.prop("checked", false);	
 }
 
-function setNationality(isBrazilian)
+function setNationality()
 {
-	if(isBrazilian)
+	if(isBrazilian == 'true')
 	{
 		document.getElementById("fuSelectDiv").classList.remove("disabled");
 		document.getElementById("fuSelect").disabled = false;
 
 		document.getElementById("locationButton").disabled = true;		
+	}
+	else if(isBrazilian == 'false')
+	{
+		document.getElementById("fuSelectDiv").classList.add("disabled");
+		document.getElementById("fuSelect").disabled = true;
+		document.getElementById("fuSelectForm").reset();
+		userInformation['fu'] = null;
+
+		document.getElementById("countyInputDiv").classList.add("disabled");
+		document.getElementById("countyInput").disabled = true;
+		document.getElementById("countyInputForm").reset();
+		userInformation['county'] = null;
+
+		document.getElementById("locationButton").disabled = false;
 	}
 	else
 	{
@@ -152,7 +170,7 @@ function setNationality(isBrazilian)
 		document.getElementById("countyInputForm").reset();
 		userInformation['county'] = null;
 
-		document.getElementById("locationButton").disabled = false;
+		document.getElementById("locationButton").disabled = true;		
 	}
 }
 
