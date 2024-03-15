@@ -12,6 +12,8 @@ let userInformation = {
 	fu: null,
 	county: null,
 	skinType: -1,
+	timestamp: null,
+	submitCount: 0,
 };
 let isBrazilian = null;
 
@@ -228,6 +230,13 @@ function calculateSkinType()
 
 	let skinType = score == 0? 1 : Math.ceil(score/6);
 	userInformation['skinType'] = skinType;
+
+	userInformation['timestamp'] = Date.now();
+	let submitCount = localStorage.getItem('submitCount') == null 
+					? 1 
+					: submitCount + 1; 
+	localStorage.setItem('submitCount', submitCount);
+	userInformation['submitCount'] = submitCount;
 
 	addNewUserInformation(userInformation);
 
