@@ -233,12 +233,10 @@ function calculateSkinType()
 
 	userInformation['timestamp'] = Date.now();
 	let submitCount = parseInt(localStorage.getItem('submitCount'));
-	console.log(`submitCount antes: ${submitCount}`);
-	submitCount = (submitCount == NaN || submitCount < 0) 
+	submitCount = (isNaN(submitCount) || submitCount < 0) 
 					? 1 
 					: submitCount + 1; 
 	localStorage.setItem('submitCount', submitCount);
-	console.log(`submitCount depois: ${submitCount}`);
 	userInformation['submitCount'] = submitCount;
 
 	addNewUserInformation(userInformation);
