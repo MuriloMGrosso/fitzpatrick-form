@@ -93,6 +93,77 @@ input[type="checkbox"] {
 	cursor: pointer;
 }
 
+input[type="file"] {
+	display: none;
+}
+
+.inputLabel {
+	font-family: Arial, Helvetica, Sans-serif;
+	font-size: 13px;
+
+	border-style: outset;
+	border-width: 2px;
+  	background-color: #ffbf00;
+  	border-color: #ffbf00;
+  	color: white;
+  	padding: 15px 70px;
+	border-radius: 5px;
+	margin: 20px;
+	cursor: pointer;
+
+	transition-duration: 0.2s;
+}
+
+.inputLabel:hover {
+	background-color: white;
+	color: #ffbf00;
+}
+
+/*--------------------------------------------*/
+
+.slider {
+	-webkit-appearance: none;
+	appearance: none; 
+	width: 400px;
+	height: 20px;
+	cursor: pointer;
+	outline: none;
+	overflow: hidden;
+	border-radius: 16px;
+}
+  
+.slider::-webkit-slider-runnable-track {
+	height: 20px;
+	background: #dddddd;
+	border-radius: 16px;
+}
+  
+.slider::-moz-range-track {
+	height: 20px;
+	background: #dddddd;
+	border-radius: 16px;
+}
+  
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none; 
+	height: 20px;
+	width: 20px;
+	background-color: #fff;
+	border-radius: 50%;
+	border: 2px solid #ffbf00;
+	box-shadow: -410px 0 0 400px #ffbf00;
+}
+  
+.slider::-moz-range-thumb {
+	height: 20px;
+	width: 20px;
+	background-color: #fff;
+	border-radius: 50%;
+	border: 1px solid #ffbf00;
+	box-shadow: -410px 0 0 400px #ffbf00;
+}
+
 /*--------------------------------------------*/
 
 .imageContainer {
@@ -132,6 +203,46 @@ input[type="checkbox"] {
 
 .caption {
     margin-top: 0px;
+}
+
+.lightContainer {
+    display: inline-block;
+
+    border-radius: 10px;
+    margin: 0px;
+    width: 100px;
+    height: 150px;
+    padding-top:  10px;
+	cursor: pointer;
+
+  	transition-duration: 0.1s;
+}
+
+.lightContainer:hover img {
+   	transform:scale(1.2);
+}
+
+.imageContainerLightolor {
+	margin-right:auto; 
+	margin-left:auto; 
+	width:100%;
+}
+
+.lightContainer img {
+	width: 80px;
+	height: 120px;
+
+  	border-radius: 10%;
+
+  	transition-duration: 0.2s;
+}
+
+.circleImage {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-top: 75px;
+	margin-left: -125px;
 }
 
 /*--------------------------------------------*/
@@ -181,6 +292,29 @@ input[type="checkbox"] {
 }
 
 /*--------------------------------------------*/
+
+#ageInput {
+	width: 64px;
+}
+
+#imageInstructions {
+	width:200px;
+	height:200px;
+}
+
+#imageBrightnessTest {
+	width:200px;
+	height:200px;
+}
+
+#forearmImage {
+	width:200px;
+	height:200px;
+	object-fit: cover;
+	border-radius: 10%;
+}
+
+/*--------------------------------------------*/
 /*Suporte para outras resoluções*/
 
 @media only screen and (max-width: 768px) {
@@ -213,4 +347,8 @@ input[type="checkbox"] {
 	button {
 	  	padding: 10px 20px;
 	}
+
+	.inputLabel {
+		padding: 10px 48px;		
+   }
 }
