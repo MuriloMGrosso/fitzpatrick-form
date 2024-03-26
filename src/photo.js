@@ -199,7 +199,5 @@ function saveData()
 	localStorage.setItem('submitCount', submitCount);
 	monkForm['submitCount'] = submitCount;
 
-	console.log(monkForm);
-
 	addNewMonkForm(monkForm);
 }

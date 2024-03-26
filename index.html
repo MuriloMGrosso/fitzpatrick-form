@@ -1,26 +1,54 @@
 <!DOCTYPE html>
-<head>
-    <title>Main page</title>
+<html>
+    <head>
+        <title>Página principal</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
 
-    <link rel="stylesheet" href="src/styles.css">
-    <link rel="icon" href="img/extras/sun.ico" type="image/x-icon">
+        <link rel="stylesheet" href="src/styles.css">
+        <link rel="icon" href="img/extras/sun.ico" type="image/x-icon">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="module" src="src/index.js"></script>
-</head>
-<body class="center">
-    <div>
-        <p>Descubra o FPS natural de sua pele!</p>
-        <button id="fitzpatrickFormButton" type="button">Vamos lá</button>
-    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script type="module" src="src/index.js"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>A COR DO BRASILEIRO</h1>
+                <p>Um estudo sobre tonalidade de pele</p>
+            </div>
+            <img id="logoUSP" src="img/extras/usp.png">
+        </header>
 
-    <div>
-        <p>Formulário</p>
-        <button id="monkFormButton" type="button">Vamos lá</button>
-    </div>
-</body>
+        <div class="center">
+            <p>
+                Esta pesquisa tem como objetivo a criação de uma <b>base de dados</b> contendo os diferentes <b>tons de pele</b> no território brasileiro. 
+                <br> Você pode contribuir preenchendo os <b>formulários</b> abaixo.
+            </p>
+
+            <div class="formContainer">
+                <h2>Descubra o FPS natural de sua pele!</h2>
+                <p>Responda a 9 perguntas rápidas e descubra o <b>Fator de Proteção Solar</b> de sua pele!</p>
+                <button id="fitzpatrickFormButton" type="button">Vamos lá</button>
+            </div>
+
+            <div class="formContainer">
+                <h2>Tonalidade da sua pele</h2>
+                <p>Ajude a pesquisa científica respondendo apenas algumas perguntas</p>
+                <button id="monkFormButton" type="button">Vamos lá</button>
+            </div>
+
+            <br><br>
+
+            <div>
+                <p class="progress">Photobiomedical Instrumentation Group <br> 
+                    Physics Department, FFCLRP <br><br>
+                    UNIVERSIDADE DE SÃO PAULO - 2024</p>
+            </div>
+
+            <br>
+        </div>
+    </body>
 </html>
