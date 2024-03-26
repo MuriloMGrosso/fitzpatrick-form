@@ -35,32 +35,28 @@ h1, h2 {
 /*--------------------------------------------*/
 
 header {
-	text-align: center;
+	text-align: left;
 	background: #008CBA;
-	display: flex;
 	padding: 20px;
 }
 
 header h1 {
 	color: white;
 	margin-bottom: 0;
-	margin-left: 10%;
-	width: 100%;
+	margin-left: 5%;
 }
 
 header p {
 	color: #dddddd;
 	margin-top: 0;
-	margin-left: 10%;
+	margin-left: 5%;
 }
 
 #logoUSP {
-	position: relative;
-	right: -60%;
-	top: 20%;
+	float: right;
 	width: 110px;
 	height: 80px;
-	margin: 0;
+	margin-right: 5%;
 }
 
 .formContainer {
@@ -73,6 +69,20 @@ header p {
 
 .formContainer h2 {
 	padding-top: 40px;
+}
+
+.headerButtons {
+	padding: 0px;
+	margin-left: -20px;
+	margin-right: -20px;
+	margin-bottom: -20px;
+	height: 5vh;
+
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	background-color: #3a49cf;
 }
 
 /*--------------------------------------------*/
@@ -100,6 +110,25 @@ button:disabled, button[disabled] {
   	color: white;
   	border-color: #ffeaab;
 	cursor: default;
+}
+
+.headerButton {
+	background-color: #3a49cf;
+	border-style: none;
+	color: white;
+	padding: 0px 0px;
+	width: 24%;
+	height: 100%;
+	border-radius: 0px;
+	margin: 0px;
+	cursor: pointer;
+
+	transition-duration: 0.2s;
+}
+
+.headerButton:hover {
+	background-color: #008CBA;
+	color: #ffbf00;
 }
 
 /*--------------------------------------------*/

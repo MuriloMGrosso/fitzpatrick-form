@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Página principal</title>
+        <title>A Cor do Brasileiro</title>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,29 +15,56 @@
     </head>
     <body>
         <header>
-            <div>
-                <h1>A COR DO BRASILEIRO</h1>
-                <p>Um estudo sobre tonalidade de pele</p>
-            </div>
             <img id="logoUSP" src="img/extras/usp.png">
+            <h1>A COR DO BRASILEIRO</h1>
+            <p>Um estudo sobre tonalidade de pele</p>
+            <br>
+            <div class="headerButtons">
+                <button id="summaryButton" class="headerButton">RESUMO</button>
+                <button id="formsButton"  class="headerButton">FORMULÁRIOS</button>
+                <button id="contactButton"  class="headerButton">CONTATO</button>
+            </div>
         </header>
 
         <div class="center">
-            <p>
-                Esta pesquisa tem como objetivo a criação de uma <b>base de dados</b> contendo os diferentes <b>tons de pele</b> no território brasileiro. 
-                <br> Você pode contribuir preenchendo os <b>formulários</b> abaixo.
-            </p>
+            <br>
 
-            <div class="formContainer">
-                <h2>Descubra o FPS natural de sua pele!</h2>
-                <p>Responda a 9 perguntas rápidas e descubra o <b>Fator de Proteção Solar</b> de sua pele!</p>
-                <button id="fitzpatrickFormButton" type="button">Vamos lá</button>
+            <div id="summary">
+                <h1>RESUMO</h1>
+                <p>
+                    Esta pesquisa está sendo desenvolvida por alunos e pesquisadores da <b>USP</b> com o objetivo 
+                    da criação de uma <b>base de dados</b> dos diferentes <b>tons de pele</b> no território brasileiro. 
+                    Esse estudo poderá ajudar, principalmente, no tratamento de doenças relacionadas à pele.
+                    <br><br>
+                    Você pode contribuir preenchendo os <b>formulários</b> abaixo!
+                </p>
             </div>
 
-            <div class="formContainer">
-                <h2>Tonalidade da sua pele</h2>
-                <p>Ajude a pesquisa científica respondendo apenas algumas perguntas</p>
-                <button id="monkFormButton" type="button">Vamos lá</button>
+            <br>
+
+            <div id="forms">
+                <div class="formContainer">
+                    <h2>Descubra o FPS natural de sua pele!</h2>
+                    <p>Responda a 9 perguntas rápidas e descubra o <b>Fator de Proteção Solar</b> de sua pele!</p>
+                    <button id="fitzpatrickFormButton" type="button">Vamos lá</button>
+                </div>
+
+                <div class="formContainer">
+                    <h2>Tonalidade da sua pele</h2>
+                    <p>Ajude a pesquisa científica respondendo a estas perguntas relacionadas a cor de sua pele!</p>
+                    <button id="monkFormButton" type="button">Vamos lá</button>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div id="contact">
+                <h1>CONTATO</h1>
+                <p>
+                    Em caso de dúvidas, sugestões ou problemas, por favor, enviar um e-mail para 
+                    <br> 
+                    <b>murilogrosso@usp.br</b>
+                </p>
             </div>
 
             <br><br>
@@ -45,7 +72,7 @@
             <div>
                 <p class="progress">Photobiomedical Instrumentation Group <br> 
                     Physics Department, FFCLRP <br><br>
-                    UNIVERSIDADE DE SÃO PAULO - 2024</p>
+                    <b>UNIVERSIDADE DE SÃO PAULO - 2024</b></p>
             </div>
 
             <br>
