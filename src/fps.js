@@ -104,11 +104,11 @@ function calculateSkinType()
 function saveData()
 {
 	fitzpatrickForm['timestamp'] = Date.now();
-	let submitCount = parseInt(localStorage.getItem('submitCount'));
+	let submitCount = parseInt(localStorage.getItem('submitCountFitzpatrick'));
 	submitCount = (isNaN(submitCount) || submitCount < 0) 
 					? 1 
 					: submitCount + 1; 
-	localStorage.setItem('submitCount', submitCount);
+	localStorage.setItem('submitCountFitzpatrick', submitCount);
 	fitzpatrickForm['submitCount'] = submitCount;
 
 	addNewFitzpatrickForm(fitzpatrickForm);

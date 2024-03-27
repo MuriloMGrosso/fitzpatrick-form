@@ -113,8 +113,9 @@ function setForearmImage(inputFile)
 
 		let reader  = new FileReader();
 		reader.onload = function(e)  {
-			let image = document.getElementById("forearmImage");
-			image.src = e.target.result;
+			let images = document.querySelectorAll('.forearmImage');
+			for (var i = 0; i < images.length; i++)
+				images[i].src = e.target.result;
 			monkForm['forearmPhoto'] = e.target.result;
 		}
 		reader.readAsDataURL(fileItem);
@@ -192,11 +193,11 @@ function setAge(value)
 function saveData()
 {
 	monkForm['timestamp'] = Date.now();
-	let submitCount = parseInt(localStorage.getItem('submitCount'));
+	let submitCount = parseInt(localStorage.getItem('submitCountMonk'));
 	submitCount = (isNaN(submitCount) || submitCount < 0) 
 					? 1 
 					: submitCount + 1; 
-	localStorage.setItem('submitCount', submitCount);
+	localStorage.setItem('submitCountMonk', submitCount);
 	monkForm['submitCount'] = submitCount;
 
 	addNewMonkForm(monkForm);

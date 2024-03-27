@@ -255,11 +255,20 @@ input[type="file"] {
   	transition-duration: 0.1s;
 }
 
-.imageContainer img {
+.skinColorContainer, .skinColor2Container {
+    width: 100px;
+    height: 100px;
+}
+
+.imageContainer img{
   	width: 80px;
   	height: 80px;
 
 	transition-duration: 0.2s;
+}
+
+.skinColorContainer img, .skinColor2Container img {
+	margin-top: 10px;
 }
 
 .imageContainer:hover img {
@@ -278,6 +287,10 @@ input[type="file"] {
 	width:60%;
 }
 
+.monkContainer {
+	width:80%;
+}
+
 .caption {
     margin-top: 0px;
 }
@@ -288,7 +301,7 @@ input[type="file"] {
     border-radius: 10px;
     margin: 0px;
     width: 100px;
-    height: 150px;
+    height: 120px;
     padding-top:  10px;
 	cursor: pointer;
 
@@ -307,9 +320,10 @@ input[type="file"] {
 
 .lightContainer img {
 	width: 80px;
-	height: 120px;
+	height: 80px;
 
   	border-radius: 10%;
+	margin-bottom: 10px;
 
   	transition-duration: 0.2s;
 }
@@ -384,11 +398,16 @@ input[type="file"] {
 	height:200px;
 }
 
-#forearmImage {
-	width:200px;
-	height:200px;
+.forearmImage {
+	width:150px;
+	height:150px;
 	object-fit: cover;
 	border-radius: 10%;
+}
+
+.forearmCircle {
+	width:200px;
+	height:200px;
 }
 
 /*--------------------------------------------*/
@@ -399,17 +418,31 @@ input[type="file"] {
 	  	width: 80%;
 	}
 
-	.imageContainerEyeColor{
+	.imageContainerEyeColor {
 		width:100%;
 	}
 
-	.imageContainerHairColor, .imageContainerSkinColor{
+	.imageContainerHairColor, .imageContainerSkinColor {
 		width:90%;
 	}
 
 	.imageContainer {
 	    width: 80px;
 	    height: 70px;
+	}
+
+	.monkContainer .imageContainer {
+	    width: 85px;
+	    height: 85px;
+	}
+
+	.imageContainerLightolor {
+		width:70%;
+	}
+
+	.lightContainer {
+	    width: 85px;
+	    height: 100px;
 	}
 
 	.imageContainer img{
@@ -427,5 +460,30 @@ input[type="file"] {
 
 	.inputLabel {
 		padding: 10px 48px;		
-   }
+   	}
+
+	.slider {
+		width: 300px;
+		height: 30px;
+	}
+	  
+	.slider::-webkit-slider-runnable-track {
+		height: 30px;
+	}
+	  
+	.slider::-moz-range-track {
+		height: 30px;
+	}
+	  
+	.slider::-webkit-slider-thumb {
+		height: 30px;
+		width: 30px;
+		box-shadow: -420px 0 0 400px #ffbf00;
+	}
+	  
+	.slider::-moz-range-thumb {
+		height: 30px;
+		width: 30px;
+		box-shadow: -420px 0 0 400px #ffbf00;
+	}
 }
