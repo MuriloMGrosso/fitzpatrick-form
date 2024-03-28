@@ -59,12 +59,31 @@ header p {
 	margin-right: 5%;
 }
 
+#forms {
+	background-color: #dddddd;
+	border-radius: 20px;
+
+	padding: 0px;
+	width: 80%;
+	padding-top: 1px;
+
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#forms h1 {
+	color: #3a49cf;
+}
+
 .formContainer {
-	border-style: solid;
-	border-color: #dddddd;
+	background-color: white;
 	border-radius: 20px;
 	border-width: 5px;
 	margin: 20px;
+	width: 500px;
+	height: 300px;
+	box-shadow: 5px 5px 0 0 #aaaaaa;
 }
 
 .formContainer h2 {

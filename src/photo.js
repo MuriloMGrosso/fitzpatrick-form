@@ -192,6 +192,8 @@ function setAge(value)
 
 function saveData()
 {
+	alert(monkForm['forearmPhoto']);
+
 	monkForm['timestamp'] = Date.now();
 	let submitCount = parseInt(localStorage.getItem('submitCountMonk'));
 	submitCount = (isNaN(submitCount) || submitCount < 0) 
