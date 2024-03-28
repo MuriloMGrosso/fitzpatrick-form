@@ -30,8 +30,10 @@ export async function addNewMonkForm(docData)
     try{
         await addDoc(monkColletion, docData);
         console.log("Dados armazenados com sucesso!");
+        alert("Dados armazenados com sucesso!");
     }
     catch(error){
         console.log(`Um erro ocorreu: ${error}`);
+        alert(error);
     }
 }

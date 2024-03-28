@@ -64,8 +64,10 @@ header p {
 	border-radius: 20px;
 
 	padding: 0px;
-	width: 80%;
+	width: 70%;
+	height: 620px;
 	padding-top: 1px;
+	padding-bottom: 1px;
 
 	justify-content: center;
 	align-items: center;
@@ -80,9 +82,8 @@ header p {
 	background-color: white;
 	border-radius: 20px;
 	border-width: 5px;
-	margin: 20px;
-	width: 500px;
-	height: 300px;
+	margin: 10px;
+	height: 250px;
 	box-shadow: 5px 5px 0 0 #aaaaaa;
 }
 
@@ -447,7 +448,7 @@ input[type="file"] {
 
 	.imageContainer {
 	    width: 80px;
-	    height: 70px;
+	    height: 105px;
 	}
 
 	.monkContainer .imageContainer {
@@ -504,5 +505,9 @@ input[type="file"] {
 		height: 30px;
 		width: 30px;
 		box-shadow: -420px 0 0 400px #ffbf00;
+	}
+
+	#forms {
+		width: 80%;
 	}
 }
