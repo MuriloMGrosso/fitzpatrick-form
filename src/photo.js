@@ -21,6 +21,7 @@ let isBrazilian = null;
 let questions = [
 	'intro',
 	'brightnessTest',
+	'colorTest',
 	'skinColor',
 	'skinColor2',
 	'forearmPhoto',

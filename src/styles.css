@@ -280,7 +280,7 @@ input[type="file"] {
   	transition-duration: 0.1s;
 }
 
-.skinColorContainer, .skinColor2Container {
+.monkContainer .skinColorContainer,.monkContainer .skinColor2Container {
     width: 100px;
     height: 100px;
 }
@@ -292,7 +292,7 @@ input[type="file"] {
 	transition-duration: 0.2s;
 }
 
-.skinColorContainer img, .skinColor2Container img {
+.monkContainer .skinColorContainer img, .monkContainer .skinColor2Container img {
 	margin-top: 10px;
 }
 
@@ -426,7 +426,7 @@ input[type="file"] {
 	height:200px;
 }
 
-#imageBrightnessTest {
+#imageBrightnessTest, #imageColorTest {
 	width:200px;
 	height:200px;
 }
