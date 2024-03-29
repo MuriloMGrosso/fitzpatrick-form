@@ -51,7 +51,11 @@ $(document).ready(function() {
     });
 
 	for(let i = 1; i < 11; i++)
-		document.getElementById(`circleImage${i}`).style.scale = 1 - i/100;
+	{
+		let scale = 1 - i/100;
+		document.getElementById(`circleImage${i}`).style.scale = scale;
+		// document.getElementById(`circleImageSwatch${i}`).style.scale = scale;
+	}
 
 	document.getElementById("ImageColorSlider").addEventListener('input', function () {
 		setColorSlider(this.value);
@@ -161,12 +165,15 @@ function setColorSlider(value)
 
 	for(let i = 1; i < 10; i++)
 	{
+		let currentOpacity = 1;
+
 		if(i < n || i > n + 1)
-			document.getElementById(`circleImage${i}`).style.opacity = 0;
+			currentOpacity = 0;
 		else if(i == n)
-			document.getElementById(`circleImage${i}`).style.opacity = relativeOpacity;
-		else
-			document.getElementById(`circleImage${i}`).style.opacity = 1;
+			currentOpacity = relativeOpacity;
+
+		document.getElementById(`circleImage${i}`).style.opacity = currentOpacity;
+		// document.getElementById(`circleImageSwatch${i}`).style.opacity = currentOpacity;
 	}
 }
 

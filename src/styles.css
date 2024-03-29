@@ -59,7 +59,7 @@ header p {
 	margin-right: 5%;
 }
 
-#forms {
+/* #forms {
 	background-color: #dddddd;
 	border-radius: 20px;
 
@@ -72,11 +72,7 @@ header p {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-}
-
-#forms h1 {
-	color: #3a49cf;
-}
+} */
 
 .formContainer {
 	background-color: white;
@@ -85,12 +81,19 @@ header p {
 	margin: 10px;
 	margin-left: 20px;
 	margin-right: 20px;
-	height: 280px;
+	height: 260px;
 	box-shadow: 5px 5px 0 0 #aaaaaa;
 }
 
 .formContainer h2 {
 	padding-top: 40px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.formContainer p {
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 .headerButtons {
@@ -358,6 +361,14 @@ input[type="file"] {
 	margin-left: -125px;
 }
 
+/* .circleImageSwatch {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-top: 40px;
+	margin-left: -125px;
+} */
+
 /*--------------------------------------------*/
 
 .textContainer {
@@ -459,7 +470,7 @@ input[type="file"] {
 	}
 
 	.imageContainerLightolor {
-		width:70%;
+		width:80%;
 	}
 
 	.lightContainer {
@@ -507,9 +518,5 @@ input[type="file"] {
 		height: 30px;
 		width: 30px;
 		box-shadow: -420px 0 0 400px #ffbf00;
-	}
-
-	#forms {
-		width: 90%;
 	}
 }
