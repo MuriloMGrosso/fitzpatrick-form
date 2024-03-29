@@ -1,5 +1,6 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js';
 import { getFirestore, collection, addDoc} from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js';
+import { getStorage, ref, uploadString, getDownloadURL } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-storage.js';
 
 const firebaseApp = initializeApp({
     apiKey: "AIzaSyARBu83-uLTUPAIrnBvuUjDe6B6A5PEFdw",
@@ -13,6 +14,8 @@ const firebaseApp = initializeApp({
 const firestore = getFirestore();
 const fitzpatrickColletion = collection(firestore, 'fitzpatrickForm');
 const monkColletion = collection(firestore, 'monkForm');
+
+const storage = getStorage();
 
 export async function addNewFitzpatrickForm(docData)
 {
@@ -28,12 +31,20 @@ export async function addNewFitzpatrickForm(docData)
 export async function addNewMonkForm(docData)
 {
     try{
+        const forearmRef = ref(storage, `images/forearms/forearm_${docData['timestamp']}`);
+
+        await uploadString(forearmRef, docData['forearmPhoto'], 'data_url');
+        console.log("Imagem enviada com sucesso!");
+
+        await getDownloadURL(forearmRef).then((url) => {
+            docData['forearmPhoto'] = url;
+        });
+
         await addDoc(monkColletion, docData);
         console.log("Dados armazenados com sucesso!");
-        alert("Dados armazenados com sucesso!");
     }
-    catch(error){
+    catch(error)
+    {
         console.log(`Um erro ocorreu: ${error}`);
-        alert(error);
     }
 }

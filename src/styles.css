@@ -65,7 +65,7 @@ header p {
 
 	padding: 0px;
 	width: 70%;
-	height: 620px;
+	height: 680px;
 	padding-top: 1px;
 	padding-bottom: 1px;
 
@@ -83,7 +83,9 @@ header p {
 	border-radius: 20px;
 	border-width: 5px;
 	margin: 10px;
-	height: 250px;
+	margin-left: 20px;
+	margin-right: 20px;
+	height: 280px;
 	box-shadow: 5px 5px 0 0 #aaaaaa;
 }
 
@@ -508,6 +510,6 @@ input[type="file"] {
 	}
 
 	#forms {
-		width: 80%;
+		width: 90%;
 	}
 }
