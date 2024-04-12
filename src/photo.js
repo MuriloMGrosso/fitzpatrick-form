@@ -130,13 +130,13 @@ function setForearmImage(inputFile)
 			alert("Arquivo muito grande ("+ Math.round((fileSize / 1024)) +"MB), por favor selecione um arquivo com menos de 4MB");
 			if(!monkForm['forearmPhoto'])
 			{
-				document.getElementById('forearmPhotoLabel').innerHTML = '<i>nenhuma imagem selecionada</i>';
+				document.getElementById('forearmPhotoLabel').innerHTML = '<i>Nenhuma imagem foi selecionada</i>';
 				button.disabled = true;
 			}
 		}
 		else
 		{
-			document.getElementById('forearmPhotoLabel').innerHTML = '<i>imagem <b>' + fileItem.name + '</B> selecionada</i>';
+			document.getElementById('forearmPhotoLabel').innerHTML = '<i><b>Imagem selecionada com sucesso!</b></i>';
 			initializeColorSlider();
 			button.disabled = false;
 		}

@@ -325,7 +325,7 @@ input[type="file"] {
 
     border-radius: 10px;
     margin: 0px;
-    width: 100px;
+    width: 140px;
     height: 120px;
     padding-top:  10px;
 	cursor: pointer;
@@ -422,6 +422,12 @@ input[type="file"] {
 }
 
 #imageInstructions {
+	width:200px;
+	height:200px;
+	margin-bottom: -10px;
+}
+
+#skinColorTutorial img{
 	width:200px;
 	height:200px;
 }
